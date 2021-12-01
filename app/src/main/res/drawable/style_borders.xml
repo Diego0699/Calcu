@@ -12,7 +12,8 @@
     android:right="10sp"
     android:top="10sp" />
 
-<corners android:radius="10dp"/>
+<corners android:topLeftRadius="40dp"
+    android:topRightRadius="40dp"/>
 
 
 </shape>

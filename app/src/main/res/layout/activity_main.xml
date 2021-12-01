@@ -8,16 +8,18 @@
     android:visibility="visible"
     tools:context=".MainActivity">
 
+
     <TextView
 
         android:id="@+id/lblfondo"
         android:layout_width="411dp"
-        android:layout_height="397dp"
+        android:layout_height="432dp"
         android:background="@drawable/style_borders"
 
         android:fontFamily="sans-serif-black"
         android:textAlignment="center"
         android:textColor="@color/white"
+        android:textColorHighlight="#3A78AA"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,13 +27,12 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
 
-
     <TextView
         android:id="@+id/lblTitulo"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:background="#BFBBBB"
+        android:layout_marginTop="60dp"
+        android:background="#00BCD4"
         android:fontFamily="sans-serif-black"
         android:text="Calculadora"
         android:textAlignment="center"
@@ -39,57 +40,24 @@
         android:textColorHighlight="#009688"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:background="#B1B1B1"
-        android:ems="10"
-        android:hint="Ingrese su Contraseña"
-        android:hintTextColor="#424242"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUser"
-        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/txtUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:background="#B1B1B1"
-        android:ems="10"
-        android:hint="Ingrese su Usuario"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:shadowColor="#0C0C0C"
-        android:textColor="#FFFFFF"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
 
     <TextView
         android:id="@+id/lblBienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
-        android:text="Bienvenido"
+        android:layout_marginTop="128dp"
+        android:text="¡Bienvenido!"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTitulo" />
 
@@ -97,11 +65,59 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="24dp"
         android:text="Ingrese sus credenciales"
         android:textColor="@color/white"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblBienvenida" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Ingrese su Contraseña"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUser"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Ingrese su Usuario"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FF295E88"
+        android:hapticFeedbackEnabled="false"
+        android:text="Ingresar"
+
+        android:textColorHighlight="#295E88"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
