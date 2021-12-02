@@ -24,8 +24,8 @@
 
     <TextView
         android:id="@+id/lblfondo3"
-        android:layout_width="411dp"
-        android:layout_height="379dp"
+        android:layout_width="413dp"
+        android:layout_height="517dp"
         android:background="#BFBFBF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,65 +33,59 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txtResultado"
-        android:layout_width="385dp"
-        android:layout_height="110dp"
-        android:background="#E4E4E4"
-        app:layout_constraintBottom_toTopOf="@+id/lblfondo3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblUser" />
-
-    <TextView
         android:id="@+id/txtOperacion"
-        android:layout_width="382dp"
-        android:layout_height="78dp"
+        android:layout_width="397dp"
+        android:layout_height="136dp"
         android:layout_marginTop="16dp"
         android:background="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/lblfondo3" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/txtDos"
+        android:id="@+id/btnDos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#AED6F1"
         android:text="2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtOperacion" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/txtUno"
+        android:id="@+id/btnUno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#AED6F1"
         android:text="1"
-        app:layout_constraintEnd_toStartOf="@+id/txtDos"
+        app:layout_constraintEnd_toStartOf="@+id/btnDos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtOperacion" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/txtTres"
+        android:id="@+id/btnTres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#AED6F1"
         android:text="3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtDos"
+        app:layout_constraintStart_toEndOf="@+id/btnDos"
         app:layout_constraintTop_toBottomOf="@+id/txtOperacion" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/txtCinco"
+        android:backgroundTint="#AED6F1"        android:id="@+id/btnCinco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDos" />
+        app:layout_constraintTop_toBottomOf="@+id/btnDos" />
 
     <Button
         android:backgroundTint="#AED6F1"        android:id="@+id/btnOcho"
@@ -100,25 +94,25 @@
         android:text="8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCinco" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCinco" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/txtCuatro"
+        android:backgroundTint="#AED6F1"        android:id="@+id/btnCuatro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="4"
-        app:layout_constraintEnd_toStartOf="@+id/txtCinco"
+        app:layout_constraintEnd_toStartOf="@+id/btnCinco"
         app:layout_constraintStart_toStartOf="@+id/lblfondo3"
-        app:layout_constraintTop_toBottomOf="@+id/txtUno" />
+        app:layout_constraintTop_toBottomOf="@+id/btnUno" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/txtSeis"
+        android:backgroundTint="#AED6F1"        android:id="@+id/btnSeis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="6"
         app:layout_constraintEnd_toEndOf="@+id/lblfondo3"
-        app:layout_constraintStart_toEndOf="@+id/txtCinco"
-        app:layout_constraintTop_toBottomOf="@+id/txtTres" />
+        app:layout_constraintStart_toEndOf="@+id/btnCinco"
+        app:layout_constraintTop_toBottomOf="@+id/btnTres" />
 
     <Button
         android:backgroundTint="#AED6F1"        android:id="@+id/btnSiete"
@@ -127,7 +121,7 @@
         android:text="7"
         app:layout_constraintEnd_toStartOf="@+id/btnOcho"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCuatro" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCuatro" />
 
     <Button
         android:backgroundTint="#AED6F1"        android:id="@+id/btnNueve"
@@ -136,7 +130,7 @@
         android:text="9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnOcho"
-        app:layout_constraintTop_toBottomOf="@+id/txtSeis" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSeis" />
 
     <Button
         android:backgroundTint="#AED6F1"        android:id="@+id/btnSuma"
