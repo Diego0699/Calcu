@@ -32,7 +32,7 @@
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:background="#818181"
+        android:background="#053035"
         android:fontFamily="sans-serif-black"
         android:text="Calculadora"
         android:textAlignment="center"
@@ -114,7 +114,6 @@
         android:backgroundTint="#FF295E88"
         android:hapticFeedbackEnabled="false"
         android:text="Ingresar"
-
         android:textColorHighlight="#295E88"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
