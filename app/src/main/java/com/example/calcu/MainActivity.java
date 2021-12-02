@@ -35,22 +35,22 @@ public class MainActivity extends AppCompatActivity {
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // String usuario=txtUser.getText().toString();
-               // String password=txtUser.getText().toString();
+                String usuario=txtUser.getText().toString();
+                String password=txtUser.getText().toString();
 
-                //String usuarioBD="Admin";
-               // String passwordBD="Admin";
-               // if (usuario.equals(usuarioBD) && password.equals(passwordBD)){
-                  //  Toast.makeText(MainActivity.this,"Credenciales Correctas!",Toast.LENGTH_LONG).show();
+                String usuarioBD="Admin";
+                String passwordBD="Admin";
+                if (usuario.equals(usuarioBD) && password.equals(passwordBD)){
+                    Toast.makeText(MainActivity.this,"Credenciales Correctas!",Toast.LENGTH_LONG).show();
 
                     Intent i = new Intent(MainActivity.this, Calculadora.class);
 
                     startActivity(i);
 
 
-               // }else {
-                   // Toast.makeText(MainActivity.this,"Usuario o Contraseña Incorrecta!",Toast.LENGTH_SHORT).show();
-               // }
+                }else {
+                    Toast.makeText(MainActivity.this,"Usuario o Contraseña Incorrecta!",Toast.LENGTH_SHORT).show();
+                }
           }
        });
     }
