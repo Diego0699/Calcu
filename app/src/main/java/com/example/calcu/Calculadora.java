@@ -6,10 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Calculadora extends AppCompatActivity {
     TextView lblUser,txtOperacion;
-    Button btnUno,btnDos,btnTres,btnCuatro,btnCinco,btnSeis,btnSiete,btnOcho,btnNueve,btnSuma,btnResta,btnMulti,btnDiv,btnElim,btnResult;
+
+    float numero1=0.0f;
+    float numero2=0.0f;
+    String operacion="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,134 +21,109 @@ public class Calculadora extends AppCompatActivity {
         setContentView(R.layout.activity_calculadora);
 
         lblUser=findViewById(R.id.lblUser);
-        btnUno =findViewById(R.id.btnUno);
-        btnDos =findViewById(R.id.btnDos);
-        btnTres =findViewById(R.id.btnTres);
-        btnCuatro =findViewById(R.id.btnCuatro);
-        btnCinco =findViewById(R.id.btnCinco);
-        btnSeis =findViewById(R.id.btnSeis);
-        btnSiete =findViewById(R.id.btnSiete);
-        btnOcho =findViewById(R.id.btnOcho);
-        btnNueve =findViewById(R.id.btnNueve);
-        btnSuma =findViewById(R.id.btnSuma);
-        btnResta =findViewById(R.id.btnResta);
-        btnMulti =findViewById(R.id.btnMulti);
-        btnDiv =findViewById(R.id.btnDiv);
-        btnElim =findViewById(R.id.btnElim);
-        btnResult =findViewById(R.id.btnResult);
         txtOperacion=findViewById(R.id.txtOperacion);
-
         lblUser.setText("Bienvenido Admin");
-        float numero1=0;
-        float numero2=0;
-        String operacion="";
 
-        //Funciones de cada boton
-        btnUno.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText(txtOperacion.getText()+"1");
-            }
-        });
-        btnDos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText(txtOperacion.getText()+"2");
-            }
-        });
-        btnTres.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText(txtOperacion.getText()+"3");
-            }
-        });
-        btnCuatro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText(txtOperacion.getText()+"4");            }
-        });
-        btnCinco.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText(txtOperacion.getText()+"5");
-            }
-        });
-        btnSeis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText(txtOperacion.getText()+"6");
-            }
-        });
-        btnSiete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText(txtOperacion.getText()+"7");
-            }
-        });
-        btnOcho.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText(txtOperacion.getText()+"8");
-            }
-        });
-        btnNueve.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText(txtOperacion.getText()+"8");
-            }
-        });
-        btnSuma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText("+");
-            }
-        });
-        btnResta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText("-");
-            }
-        });
-        btnMulti.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText("*");
-            }
-        });
-        btnDiv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtOperacion.setText("/");
-            }
-        });
-        btnElim.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+
+    }
+    public void MostarUno(View view) {
+         numero1=Float.parseFloat(txtOperacion.getText().toString()+ "");
+        if (numero1 == 0.0f){
+          txtOperacion.setText("1");
+        }else{
+            txtOperacion.setText(txtOperacion.getText() + "1");
+            numero1 = Float.parseFloat(txtOperacion.getText().toString()+"");
+        }
+
+    }
+    public void MostarDos(View view) {
+        numero1=Float.parseFloat(txtOperacion.getText().toString());
+        if (numero1 == 0.0f){
+            txtOperacion.setText("2");
+        }else{
+            txtOperacion.setText(txtOperacion.getText() + "2");
+        }
+    }
+
+    public void MostarTres(View view) {
+        numero1=Float.parseFloat(txtOperacion.getText().toString());
+        if (numero1 == 0.0f){
+            txtOperacion.setText("3");
+        }else{
+            txtOperacion.setText(txtOperacion.getText() + "3");
+        }
+    }
+    public void MostarCuatro(View view) {
+        numero1=Float.parseFloat(txtOperacion.getText().toString());
+        if (numero1 == 0.0f){
+            txtOperacion.setText("4");
+        }else{
+            txtOperacion.setText(txtOperacion.getText() + "4");
+        }
+    }
+    public void MostarCinco(View view) {
+        numero1=Float.parseFloat(txtOperacion.getText().toString());
+        if (numero1 == 0.0f){
+            txtOperacion.setText("5");
+        }else{
+            txtOperacion.setText(txtOperacion.getText() + "5");
+        }
+    }
+    public void MostarSeis(View view) {
+        numero1=Float.parseFloat(txtOperacion.getText().toString());
+        if (numero1 == 0.0f){
+            txtOperacion.setText("6");
+        }else{
+            txtOperacion.setText(txtOperacion.getText() + "6");
+        }
+    }
+    public void MostarSiete(View view) {
+        numero1=Float.parseFloat(txtOperacion.getText().toString());
+        if (numero1 == 0.0f){
+            txtOperacion.setText("7");
+        }else{
+            txtOperacion.setText(txtOperacion.getText() + "7");
+        }
+    }
+    public void MostarOcho(View view) {
+        numero1=Float.parseFloat(txtOperacion.getText().toString());
+        if (numero1 == 0.0f){
+            txtOperacion.setText("8");
+        }else{
+            txtOperacion.setText(txtOperacion.getText() + "8");
+        }
+    }
+    public void MostarNueve(View view) {
+        numero1=Float.parseFloat(txtOperacion.getText().toString());
+        if (numero1 == 0.0f){
+            txtOperacion.setText("9");
+        }else{
+            txtOperacion.setText(txtOperacion.getText() + "9");
+        }
+    }
+
+    public void Limpiar(View view) {
+        txtOperacion.setText("0");
+    }
+    public void OpDividir(View view) {
+        numero1 = Float.parseFloat(txtOperacion.getText().toString());
+        operacion="/";
+        txtOperacion.setText("0");
+    }
+
+    public void MostrarResultado(View view) {
+        numero2 = Float.parseFloat(txtOperacion.getText().toString());
+        if (operacion.equals("/") ){
+            if (numero2 == 0) {
                 txtOperacion.setText("0");
+                Toast.makeText(this,"Operacion no valida!",Toast.LENGTH_LONG).show();
+            }else{
+                float result= numero1/numero2;
+                txtOperacion.setText(result + "");
             }
-        });
-        btnResult.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-
-
-
-
+        }
     }
-    public int suma(int a,int b){
-        return a+b;
-    }
-    public int resta(int a,int b){
-        return a-b;
-    }
-    public int multipicacion(int a,int b){
-        return a*b;
-    }
-    public int division(int a,int b){
-        return a/b;
-    }
+
+
+
 }

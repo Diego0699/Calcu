@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calcu">
         <activity
+            android:name=".CalculadoraV2"
+            android:exported="false" />
+        <activity
             android:name=".Calculadora"
             android:exported="false" />
         <activity

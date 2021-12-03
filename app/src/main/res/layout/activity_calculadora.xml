@@ -50,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:backgroundTint="#AED6F1"
+        android:onClick="MostarDos"
         android:text="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -62,6 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:backgroundTint="#AED6F1"
+        android:onClick="MostarUno"
         android:text="1"
         app:layout_constraintEnd_toStartOf="@+id/btnDos"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,67 +75,81 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:backgroundTint="#AED6F1"
+        android:onClick="MostarTres"
         android:text="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnDos"
         app:layout_constraintTop_toBottomOf="@+id/txtOperacion" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnCinco"
+        android:backgroundTint="#AED6F1"
+        android:id="@+id/btnCinco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="MostarCinco"
         android:text="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnDos" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnOcho"
+        android:backgroundTint="#AED6F1"
+        android:id="@+id/btnOcho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="MostarOcho"
         android:text="8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCinco" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnCuatro"
+        android:id="@+id/btnCuatro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#AED6F1"
+        android:onClick="MostarCuatro"
         android:text="4"
         app:layout_constraintEnd_toStartOf="@+id/btnCinco"
-        app:layout_constraintStart_toStartOf="@+id/lblfondo3"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnUno" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnSeis"
+        android:id="@+id/btnSeis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#AED6F1"
+        android:onClick="MostarSeis"
         android:text="6"
-        app:layout_constraintEnd_toEndOf="@+id/lblfondo3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCinco"
         app:layout_constraintTop_toBottomOf="@+id/btnTres" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnSiete"
+        android:backgroundTint="#AED6F1"
+        android:id="@+id/btnSiete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="MostarSiete"
         android:text="7"
         app:layout_constraintEnd_toStartOf="@+id/btnOcho"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCuatro" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnNueve"
+        android:backgroundTint="#AED6F1"
+        android:id="@+id/btnNueve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="MostarNueve"
         android:text="9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnOcho"
         app:layout_constraintTop_toBottomOf="@+id/btnSeis" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnSuma"
+        android:backgroundTint="#AED6F1"
+        android:id="@+id/btnSuma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
@@ -142,7 +158,8 @@
         app:layout_constraintTop_toBottomOf="@+id/btnSiete" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnResta"
+        android:backgroundTint="#AED6F1"
+        android:id="@+id/btnResta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-"
@@ -151,7 +168,8 @@
         app:layout_constraintTop_toBottomOf="@+id/btnOcho" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnMulti"
+        android:backgroundTint="#AED6F1"
+        android:id="@+id/btnMulti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*"
@@ -160,18 +178,22 @@
         app:layout_constraintTop_toBottomOf="@+id/btnNueve" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnDiv"
+        android:backgroundTint="#AED6F1"
+        android:id="@+id/btnDiv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="OpDividir"
         android:text="/"
         app:layout_constraintEnd_toStartOf="@+id/btnElim"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSuma" />
 
     <Button
-        android:backgroundTint="#AED6F1"        android:id="@+id/btnElim"
+        android:backgroundTint="#AED6F1"
+        android:id="@+id/btnElim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Limpiar"
         android:text="Elim"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -182,6 +204,7 @@
         android:id="@+id/btnResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="MostrarResultado"
         android:text="Result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnElim"

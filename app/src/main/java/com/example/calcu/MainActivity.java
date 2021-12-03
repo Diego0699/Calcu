@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 if (usuario.equals(usuarioBD) && password.equals(passwordBD)){
                     Toast.makeText(MainActivity.this,"Credenciales Correctas!",Toast.LENGTH_LONG).show();
 
-                    Intent i = new Intent(MainActivity.this, Calculadora.class);
+                    Intent i = new Intent(MainActivity.this, CalculadoraV2.class);
 
                     startActivity(i);
 

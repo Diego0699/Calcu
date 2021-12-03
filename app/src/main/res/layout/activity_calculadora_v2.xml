@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculadoraV2">
+
+    <Button
+        android:id="@+id/btnSuma2"
+        android:layout_width="408dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FF295E88"
+        android:text="Suma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero2" />
+
+    <Button
+        android:id="@+id/btnResta2"
+        android:layout_width="408dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF295E88"
+        android:text="Resta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSuma2" />
+
+    <TextView
+        android:id="@+id/txtResultados"
+        android:layout_width="378dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:hint="0"
+        android:textAlignment="center"
+        android:textColor="#B32E2E"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNumero1"
+        android:layout_width="378dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Ingrese un valor"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultados" />
+
+    <EditText
+        android:id="@+id/txtNumero2"
+        android:layout_width="378dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:hint="Ingrese un valor"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero1" />
+
+    <Button
+        android:id="@+id/btnMulti2"
+        android:layout_width="408dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF295E88"
+        android:text="Multiplicaciòn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnResta2" />
+
+    <Button
+        android:id="@+id/btnDiv2"
+        android:layout_width="408dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF295E88"
+        android:text="Divisiòn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMulti2" />
+
+    <Button
+        android:id="@+id/btnLimpiar2"
+        android:layout_width="408dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#940000"
+        android:text="Limpiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDiv2" />
+
+    <TextView
+        android:id="@+id/lblUser2"
+        android:layout_width="400dp"
+        android:layout_height="72dp"
+        android:text="User"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLimpiar2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
