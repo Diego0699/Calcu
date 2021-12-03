@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CalculadoraV2 extends AppCompatActivity {
      Button btnSuma2;
@@ -82,16 +83,22 @@ public class CalculadoraV2 extends AppCompatActivity {
 
     }
 
-    public int suma(int a, int b){
+    public double suma(int a, int b){
         return a+b;
     }
-    public int resta(int a, int b){
+    public double resta(int a, int b){
         return a-b;
     }
-    public int multiplicacion(int a, int b){
+    public double multiplicacion(int a, int b){
         return a*b;
     }
-    public int division(int a, int b){
-        return a/b;
+    public double division(int a, int b){
+        int respuesta=0;
+        if (b!=0){
+            respuesta=a/b;
+        }else{
+            Toast.makeText(CalculadoraV2.this ,"Operacion Invalida!",Toast.LENGTH_SHORT).show();
+        }
+        return respuesta;
     }
 }
