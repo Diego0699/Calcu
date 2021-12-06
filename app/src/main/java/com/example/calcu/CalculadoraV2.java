@@ -2,6 +2,7 @@ package com.example.calcu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,8 @@ public class CalculadoraV2 extends AppCompatActivity {
      TextView lblUser2;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +41,10 @@ public class CalculadoraV2 extends AppCompatActivity {
         txtNumero2=findViewById(R.id.txtNumero2);
         lblUser2=findViewById(R.id.lblUser2);
 
-        lblUser2.setText("¡Bienvenido Admin!" );
+        //Atrapar valor
+        Intent atraparValor=getIntent();
+        String usuario = atraparValor.getStringExtra("DATA2");
+        lblUser2.setText("¡Bienvenido "+ usuario+"!" );
 
 
 
@@ -97,7 +103,7 @@ public class CalculadoraV2 extends AppCompatActivity {
         if (b!=0){
             respuesta=a/b;
         }else{
-            Toast.makeText(CalculadoraV2.this ,"Operacion Invalida!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(CalculadoraV2.this ,"No se puede divir entre cero!",Toast.LENGTH_SHORT).show();
         }
         return respuesta;
     }

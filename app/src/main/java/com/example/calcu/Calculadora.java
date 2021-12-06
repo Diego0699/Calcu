@@ -2,18 +2,20 @@ package com.example.calcu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Calculadora extends AppCompatActivity {
-    TextView lblUser,txtOperacion;
+    TextView lblUser,txtOperacion,txtConcatenar;
+    Button btnCero,btnUno,btnDos,btnTres,btnCuatro,btnCinco,btnSeis,btnSiete,btnOcho,btnNueve,btnPunto,btnSuma,btnResta,btnMulti,btnDiv,btnElim,btnResult;
 
-    float numero1=0.0f;
-    float numero2=0.0f;
-    String operacion="";
+    double numero1, numero2, resultado;
+    String operador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,108 +24,214 @@ public class Calculadora extends AppCompatActivity {
 
         lblUser=findViewById(R.id.lblUser);
         txtOperacion=findViewById(R.id.txtOperacion);
-        lblUser.setText("Bienvenido Admin");
 
+        //Atrapar valor
+        Intent atraparValor=getIntent();
+        String usuario=atraparValor.getStringExtra("DATA");
+        lblUser.setText("¡Bienvenido "+ usuario+"!");
 
-    }
-    public void MostarUno(View view) {
-         numero1=Float.parseFloat(txtOperacion.getText().toString()+ "");
-        if (numero1 == 0.0f){
-          txtOperacion.setText("1");
-        }else{
-            txtOperacion.setText(txtOperacion.getText() + "1");
-            numero1 = Float.parseFloat(txtOperacion.getText().toString()+"");
-        }
+        btnCero=findViewById(R.id.btnCero);
+        btnUno=findViewById(R.id.btnUno);
+        btnDos=findViewById(R.id.btnDos);
+        btnTres=findViewById(R.id.btnTres);
+        btnCuatro=findViewById(R.id.btnCuatro);
+        btnCinco=findViewById(R.id.btnCinco);
+        btnSeis=findViewById(R.id.btnSeis);
+        btnSiete=findViewById(R.id.btnSiete);
+        btnOcho=findViewById(R.id.btnOcho);
+        btnNueve=findViewById(R.id.btnNueve);
+        btnPunto=findViewById(R.id.btnPunto);
+        btnSuma=findViewById(R.id.btnSuma);
+        btnResta=findViewById(R.id.btnResta);
+        btnMulti=findViewById(R.id.btnMulti);
+        btnDiv=findViewById(R.id.btnDiv);
+        btnElim=findViewById(R.id.btnElim);
+        btnResult=findViewById(R.id.btnResult);
 
-    }
-    public void MostarDos(View view) {
-        numero1=Float.parseFloat(txtOperacion.getText().toString());
-        if (numero1 == 0.0f){
-            txtOperacion.setText("2");
-        }else{
-            txtOperacion.setText(txtOperacion.getText() + "2");
+    btnCero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+                txtOperacion.setText(txtConcatenar.getText().toString() + "0");
+            }
+        });
+    btnUno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+                txtOperacion.setText(txtConcatenar.getText().toString() + "1");
+            }
+        });
+    btnDos.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+            txtOperacion.setText(txtConcatenar.getText().toString() + "2");
         }
-    }
+    });
+    btnTres.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+            txtOperacion.setText(txtConcatenar.getText().toString() + "3");
+        }
+    });
+    btnCuatro.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+            txtOperacion.setText(txtConcatenar.getText().toString() + "4");
+        }
+    });
+    btnCinco.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+            txtOperacion.setText(txtConcatenar.getText().toString() + "5");
+        }
+    });
+    btnSeis.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+            txtOperacion.setText(txtConcatenar.getText().toString() + "6");
+        }
+    });
+    btnSiete.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+            txtOperacion.setText(txtConcatenar.getText().toString() + "7");
+        }
+    });
+    btnOcho.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+            txtOperacion.setText(txtConcatenar.getText().toString() + "8");
+        }
+    });
+    btnNueve.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+            txtOperacion.setText(txtConcatenar.getText().toString() + "9");
+        }
+    });
+    btnPunto.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+            txtOperacion.setText(txtConcatenar.getText().toString() + ".");
+        }
+    });
+    btnSuma.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            try{
+                operador = "+";
+                txtConcatenar = (TextView)findViewById(R.id.txtOperacion);
+                numero1 = Double.parseDouble(txtConcatenar.getText().toString());
+                txtOperacion.setText("");
+            } catch (Exception e) {
+            Toast.makeText(Calculadora.this,"Operacion Invalida!",Toast.LENGTH_SHORT).show();
+            }
 
-    public void MostarTres(View view) {
-        numero1=Float.parseFloat(txtOperacion.getText().toString());
-        if (numero1 == 0.0f){
-            txtOperacion.setText("3");
-        }else{
-            txtOperacion.setText(txtOperacion.getText() + "3");
         }
-    }
-    public void MostarCuatro(View view) {
-        numero1=Float.parseFloat(txtOperacion.getText().toString());
-        if (numero1 == 0.0f){
-            txtOperacion.setText("4");
-        }else{
-            txtOperacion.setText(txtOperacion.getText() + "4");
-        }
-    }
-    public void MostarCinco(View view) {
-        numero1=Float.parseFloat(txtOperacion.getText().toString());
-        if (numero1 == 0.0f){
-            txtOperacion.setText("5");
-        }else{
-            txtOperacion.setText(txtOperacion.getText() + "5");
-        }
-    }
-    public void MostarSeis(View view) {
-        numero1=Float.parseFloat(txtOperacion.getText().toString());
-        if (numero1 == 0.0f){
-            txtOperacion.setText("6");
-        }else{
-            txtOperacion.setText(txtOperacion.getText() + "6");
-        }
-    }
-    public void MostarSiete(View view) {
-        numero1=Float.parseFloat(txtOperacion.getText().toString());
-        if (numero1 == 0.0f){
-            txtOperacion.setText("7");
-        }else{
-            txtOperacion.setText(txtOperacion.getText() + "7");
-        }
-    }
-    public void MostarOcho(View view) {
-        numero1=Float.parseFloat(txtOperacion.getText().toString());
-        if (numero1 == 0.0f){
-            txtOperacion.setText("8");
-        }else{
-            txtOperacion.setText(txtOperacion.getText() + "8");
-        }
-    }
-    public void MostarNueve(View view) {
-        numero1=Float.parseFloat(txtOperacion.getText().toString());
-        if (numero1 == 0.0f){
-            txtOperacion.setText("9");
-        }else{
-            txtOperacion.setText(txtOperacion.getText() + "9");
-        }
-    }
+    });
+    btnResta.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
 
-    public void Limpiar(View view) {
-        txtOperacion.setText("0");
-    }
-    public void OpDividir(View view) {
-        numero1 = Float.parseFloat(txtOperacion.getText().toString());
-        operacion="/";
-        txtOperacion.setText("0");
-    }
-
-    public void MostrarResultado(View view) {
-        numero2 = Float.parseFloat(txtOperacion.getText().toString());
-        if (operacion.equals("/") ){
-            if (numero2 == 0) {
-                txtOperacion.setText("0");
-                Toast.makeText(this,"Operacion no valida!",Toast.LENGTH_LONG).show();
-            }else{
-                float result= numero1/numero2;
-                txtOperacion.setText(result + "");
+            try{
+                operador = "-";
+                txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+                numero1 = Double.parseDouble(txtConcatenar.getText().toString());
+                txtOperacion.setText("");
+            }catch (Exception e) {
+                Toast.makeText(Calculadora.this,"Operacion Invalida!",Toast.LENGTH_SHORT).show();
             }
         }
-    }
+    });
+    btnMulti.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
 
+            try{
+                operador = "*";
+                txtConcatenar = (TextView)findViewById(R.id.txtOperacion);
+                numero1 = Double.parseDouble(txtConcatenar.getText().toString());
+                txtOperacion.setText("");
+            }catch (Exception e) {
+                Toast.makeText(Calculadora.this,"Operacion Invalida!",Toast.LENGTH_SHORT).show();
+            }
+        }
+    });
+    btnDiv.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            try{
+                operador = "/";
+                txtConcatenar = (TextView)findViewById(R.id.txtOperacion);
+                numero1 = Double.parseDouble(txtConcatenar.getText().toString());
+                txtOperacion.setText("");
+            }catch (Exception e) {
+                Toast.makeText(Calculadora.this,"Operacion Invalida!",Toast.LENGTH_SHORT).show();
+            }
+        }
+    });
+    btnElim.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            numero1 = 0.0;
+            numero2 = 0.0;
+            txtOperacion.setText("");
+        }
+    });
+
+
+    btnResult.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            try {
+                txtConcatenar = (TextView) findViewById(R.id.txtOperacion);
+                numero2 = Double.parseDouble(txtConcatenar.getText().toString());
+                if(operador.equals("+")){
+                    txtOperacion.setText("");
+                    resultado = numero1 + numero2;
+                }
+                if(operador.equals("-")){
+                    txtOperacion.setText("");
+                    resultado = numero1 - numero2;
+                }
+                if(operador.equals("*")){
+                    txtOperacion.setText("");
+                    resultado = numero1 * numero2;
+                }
+                if(operador.equals("/")){
+                    txtOperacion.setText("");
+                    if(numero2 != 0){
+                        resultado = numero1 / numero2;
+                    }else {
+                        txtOperacion.setText("Infinito");
+                    }
+                }
+                if ((operador.equals("/") && numero2==0)){
+
+                    Toast.makeText(Calculadora.this,"No se puede divir entre cero!",Toast.LENGTH_SHORT).show();
+                }
+                txtOperacion.setText(String.valueOf(resultado));
+            } catch (Exception e) {
+                Toast.makeText(Calculadora.this,"Operacion Invalida!",Toast.LENGTH_SHORT).show();
+            }
+
+
+        }
+    });
+
+    }
 
 
 }
