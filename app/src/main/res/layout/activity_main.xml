@@ -14,8 +14,8 @@
         android:id="@+id/lblfondo"
         android:layout_width="411dp"
         android:layout_height="432dp"
-        android:background="@drawable/style_borders"
 
+        android:background="@drawable/style_borders"
         android:fontFamily="sans-serif-black"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -23,7 +23,7 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
 
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
-        android:text="¡Bienvenido!"
+        android:text="¡Bienvenid@!"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/white"

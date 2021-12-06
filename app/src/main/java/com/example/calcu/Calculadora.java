@@ -28,7 +28,7 @@ public class Calculadora extends AppCompatActivity {
         //Atrapar valor
         Intent atraparValor=getIntent();
         String usuario=atraparValor.getStringExtra("DATA");
-        lblUser.setText("¡Bienvenido "+ usuario+"!");
+        lblUser.setText("¡Bienvenid@ "+ usuario+"!");
 
         btnCero=findViewById(R.id.btnCero);
         btnUno=findViewById(R.id.btnUno);

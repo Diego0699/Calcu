@@ -44,7 +44,7 @@ public class CalculadoraV2 extends AppCompatActivity {
         //Atrapar valor
         Intent atraparValor=getIntent();
         String usuario = atraparValor.getStringExtra("DATA2");
-        lblUser2.setText("¡Bienvenido "+ usuario+"!" );
+        lblUser2.setText("¡Bienvenid@ "+ usuario+"!" );
 
 
 
